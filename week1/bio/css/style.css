@@ -25,6 +25,20 @@ body {
   scroll-padding: 4em;
 }
 
+svg {
+  display: block;
+}
+
+#nav-button {
+  font-size: 3rem;
+  letter-spacing: -4px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.nav-anchor {
+  display: block;
+}
+
 nav {
   height: 124px;
   padding: 1em max(4em, 10%);
@@ -33,24 +47,6 @@ nav {
   justify-content: space-between;
   background: var(--dark);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-
-  button {
-    font-size: 48px;
-    font-weight: 800;
-    letter-spacing: -4px;
-    color: rgba(0, 0, 0, 0.85);
-  }
-
-  ul {
-    li {
-      a {
-        display: block;
-        svg {
-          display: block;
-        }
-      }
-    }
-  }
 }
 
 main {
@@ -73,7 +69,14 @@ section {
   justify-content: space-between;
 
   h2 {
-    margin-bottom: 0.125em;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.85);
+  }
+
+  h3 {
+    font-weight: 600;
+    margin-bottom: 0.375em;
+    color: rgba(0, 0, 0, 0.75);
   }
 }
 
@@ -169,14 +172,6 @@ button:active {
   --btn-scale: 0.9;
 }
 
-h1 {
-  color: hsl(30 20% 20% / 1);
-  font-weight: 800;
-  text-decoration: underline;
-  text-underline-offset: 0.35em;
-  text-align: center;
-}
-
 p {
   color: hsl(30 10% 10% / 1);
   font-weight: 500;
@@ -215,6 +210,7 @@ footer {
   align-items: center;
   background: rgba(0, 0, 0, 0.04);
   border-top: 1px solid rgba(0, 0, 0, 0.2);
+
   p {
     max-width: 500px;
     font-size: 1em;
@@ -257,16 +253,15 @@ footer {
   gap: 0.65em;
 }
 
-ol {
-  li {
-    h3 {
-      font-weight: 700;
-      color: rgba(0, 0, 0, 0.75);
-    }
-    p {
-      margin-top: 0.125em;
-    }
-  }
+.list-item {
+  font-weight: 700;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.list-paragraph {
+  margin-top: 0.125em;
+  color: rgba(0, 0, 0, 0.75);
 }
 
 hr {

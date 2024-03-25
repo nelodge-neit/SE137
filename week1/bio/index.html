@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nathan Lodge">
-    <meta name="description" content="Nathan Lodge's Week 2 Biography">
+    <meta name="description" content="Nathan Lodge's Week 1 Biography">
     <meta name="theme-color" content="#f5f5db">
-    <title>NL Biography | SE111</title>
+    <title>NL SE137 | Biography</title>
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="fonts/MonaspaceKrypton-ExtraLightItalic.woff2" as="font" type="font/woff2" crossorigin>
@@ -16,25 +16,15 @@
 
 <body>
     <nav id="nav">
-        <button onclick="this.scrollTo({top:0})">
-            nl
-        </button>
+        <h1>
+            <button id="nav-button" onclick="this.scrollTo({top:0})">
+                <strong>nl</strong>
+            </button>
+        </h1>
         <ul class="horiz-list">
-            <li>
-                <a href="#about">
-                    About
-                </a>
-            </li>
-            <li>
-                <a href="#school">
-                    School
-                </a>
-            </li>
-            <li>
-                <a href="#hobbies">
-                    Hobbies
-                </a>
-            </li>
+            <li><a class="nav-anchor" href="#bio">Bio</a></li>
+            <li><a class="nav-anchor" href="#education">Education</a></li>
+            <li><a class="nav-anchor" href="#hobbies">Hobbies</a></li>
             <li>
                 <a href="#footer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
@@ -49,13 +39,13 @@
         </ul>
     </nav>
     <main>
-        <!-- about section -->
-        <h1>Nathan Lodge - About Me</h1>
-        <section id="about">
+        <!-- bio section -->
+        <section id="bio">
             <div class="section-text">
-                <h2>About</h2>
-                <p>Hi, I'm <mark><strong>Nathan Lodge</strong></mark>, I'm <mark><b>18</b></mark> and a <mark>2nd</mark>
-                    term student at NEIT (Software Engineering). I was born & raised in <mark>Windsor, CT</mark>.
+                <h2>Bio</h2>
+                <h3>about me</h3>
+                <p>Hi, I'm <mark>Nathan Lodge</mark>, I'm <mark>18</mark> and a <mark>3rd</mark>
+                    term Software Engineering student at NEIT. I was born & raised in <mark>Windsor, CT</mark>.
                 </p>
             </div>
             <div class="section-imgs">
@@ -66,38 +56,39 @@
             </div>
         </section>
         <hr>
-        <!-- school section -->
-        <section id="school">
+        <!-- education section -->
+        <section id="education">
             <div class="section-text">
-                <h2>School</h2>
-                <p>The schools i've attended.</p>
-                <ol class="vert-list">
-                    <li>
+                <h2>Education</h2>
+                <h3>the schools i've attended.</h3>
+                <ul class="vert-list">
+                    <li class="list-item">
                         <h3>
                             Sage Park Middle School
                         </h3>
-                        <p>The first school attended that I have pictured (bottom) is SPMS, a middle school that is
+                        <p class="list-paragraph">The first school attended that I have pictured (bottom) is SPMS, a
+                            middle school that is
                             located in Windsor, CT.</p>
                     </li>
-                    <li>
+                    <li class="list-item">
                         <h3>
                             Windsor High School
                         </h3>
-                        <p>
+                        <p class="list-paragraph">
                             After middle school, I attended Windsor High School for four years and graduated in 2023. At
                             WHS I took AP Computer Science and AP Computer Science Principles.
                         </p>
                     </li>
-                    <li>
+                    <li class="list-item">
                         <h3>
                             New England Institute of Technology
                         </h3>
-                        <p>
+                        <p class="list-paragraph">
                             Currently, I am attending NEIT and am in my second term. I am majoring in Software
                             Engineering and am expected to graduate in 2026.
                         </p>
                     </li>
-                </ol>
+                </ul>
             </div>
             <div class="section-imgs">
                 <div class="img-container multiple">
@@ -112,21 +103,18 @@
         <section id="hobbies">
             <div class="section-text">
                 <h2>Hobbies</h2>
-                <p>
-                    My hobbies/interests include:
-                </p>
+                <h3>my hobbies/interests include:</h3>
                 <ul class="vert-list">
-                    <li>
-                        <i>coding</i>
+                    <li class="list-item">
+                        <p class="list-paragraph">coding</p>
                     </li>
-                    <li>
-                        <em>spending quality time with
-                            friends</em>
-                        <br>
-                        (the top picture is of me and my friends at home, the bottom is of me and my friends on campus)
-                    </li>
-                    <li>
-                        <em>playing video games</em>.
+                    <li class="list-item">
+                        <p class="list-paragraph">
+                            spending quality time with friends
+                        </p>
+                    </li class="list-item">
+                    <li class="list-item">
+                        <p class="list-paragraph">playing video games</p>
                     </li>
                 </ul>
             </div>
@@ -143,13 +131,13 @@
     <footer id="footer">
         <div class="footer-content">
             <p>
-                If you'd like to learn more about me: feel free to check out my personal website which can be found at:
+                If you'd like to learn more bio me: feel free to check out my personal website which can be found at:
                 <mark><a href="https://hexiro.me">hexiro.me</a></mark>.
             </p>
             <ul class="horiz-list">
                 <li>
                     <a href="../index.html">
-                        Link to week 2 page
+                        Link to week 1 page
                     </a>
                 </li>
                 <li>
@@ -167,7 +155,6 @@
             </ul>
         </div>
         <hr>
-        <img src="images/w3validator.png" alt="A screenshot of w3 validator showing no errors or warnings.">
     </footer>
 </body>
 
