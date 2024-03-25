@@ -219,7 +219,7 @@ a {
 
 .anchor-effects {
   transition: var(--ease) transform 250ms;
-  transform: scale(var(--anchor-scale));
+  transform: translateY(var(--anchor-translate)) scale(var(--anchor-scale));
 }
 
 .anchor-inherit {
@@ -227,10 +227,12 @@ a {
 }
 
 a:hover {
-  --anchor-scale: 1.07;
+  --anchor-translate: -3px;
+  --anchor-scale: 1.02;
 }
 
 a:active {
+  --anchor-translate: -1px;
   --anchor-scale: 0.93;
 }
 
