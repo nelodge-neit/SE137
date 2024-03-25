@@ -19,7 +19,7 @@
     <nav id="nav">
         <div class="nav-left">
             <h1>
-                <button id="nav-button" onclick="this.scrollTo({top:0})">
+                <button class="nav-button" onclick="this.scrollTo({top:0})">
                     <strong>nl</strong>
                 </button>
             </h1>
@@ -31,7 +31,7 @@
             <li><a class="nav-anchor anchor-effects" href="#hobbies">Hobbies</a></li>
         </ul>
     </nav>
-    <main>
+    <main id="main">
         <!-- bio section -->
         <section id="bio">
             <div class="section-text">
@@ -45,7 +45,7 @@
             </div>
             <div class="section-imgs">
                 <div class="img-container">
-                    <img src="images/selfie.jpg"
+                    <img class="img-container-img" src="images/selfie.jpg"
                         alt="a reflection of me (Nathan Lodge) holding up a peace sign in front of a laptop with Visual Studio Code open">
                 </div>
             </div>
@@ -94,9 +94,11 @@
             </div>
             <div class="section-imgs">
                 <div class="img-container multiple">
-                    <img id="img-spms" src="images/spms.jpg" alt="a picture of Sage Park Middle School">
-                    <img id="img-whs" src="images/whs.jpg" alt="a picture of Windsor High School">
-                    <img id="img-neit" src="images/neit.jpg" alt="a picture of the New England Tech main campus">
+                    <img class="img-container-img img-spms" src="images/spms.jpg"
+                        alt="a picture of Sage Park Middle School">
+                    <img class="img-container-img img-whs" src="images/whs.jpg" alt="a picture of Windsor High School">
+                    <img class="img-container-img img-neit" src="images/neit.jpg"
+                        alt="a picture of the New England Tech main campus">
                 </div>
             </div>
         </section>
@@ -123,9 +125,9 @@
             </div>
             <div class="section-imgs">
                 <div class="img-container multiple">
-                    <img id="img-friends-1" src="images/friends1.jpg"
+                    <img class="img-container-img img-friends-1" src="images/friends1.jpg"
                         alt="a picture of me in a car with two of my friends from home">
-                    <img id="img-friends-2" src="images/friends2.jpg"
+                    <img class="img-container-img img-friends-2" src="images/friends2.jpg"
                         alt="a blurry picture of me hanging out with 3 of my friends">
                 </div>
             </div>
