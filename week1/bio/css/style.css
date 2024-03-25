@@ -35,6 +35,12 @@ hr {
   border-color: var(--dark);
 }
 
+.vert-divider {
+  width: auto;
+  height: 75%;
+  border-right: 1px solid;
+}
+
 #nav-button {
   font-size: 3rem;
   letter-spacing: -4px;
@@ -53,6 +59,14 @@ nav {
   justify-content: space-between;
   background: var(--dark);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.nav-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  gap: 40px;
 }
 
 main {
@@ -201,8 +215,15 @@ a {
   color: rgba(0, 0, 0, 0.6);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.anchor-effects {
   transition: var(--ease) transform 250ms;
   transform: scale(var(--anchor-scale));
+}
+
+.anchor-inherit {
+  color: inherit;
 }
 
 a:hover {
@@ -258,10 +279,17 @@ footer {
 
 .vert-list {
   margin-top: 0.5em;
-  padding-inline-start: 30px;
   display: flex;
   flex-direction: column;
   gap: 0.65em;
+}
+
+.hobbies-list {
+  padding-inline-start: 34px;
+}
+
+.education-list {
+  padding-inline-start: 18px;
 }
 
 .list-item {

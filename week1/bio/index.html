@@ -17,15 +17,18 @@
 
 <body>
     <nav id="nav">
-        <h1>
-            <button id="nav-button" onclick="this.scrollTo({top:0})">
-                <strong>nl</strong>
-            </button>
-        </h1>
+        <div class="nav-left">
+            <h1>
+                <button id="nav-button" onclick="this.scrollTo({top:0})">
+                    <strong>nl</strong>
+                </button>
+            </h1>
+            <hr class="vert-divider">
+        </div>
         <ul class="horiz-list">
-            <li><a class="nav-anchor" href="#bio">Bio</a></li>
-            <li><a class="nav-anchor" href="#education">Education</a></li>
-            <li><a class="nav-anchor" href="#hobbies">Hobbies</a></li>
+            <li><a class="nav-anchor anchor-effects" href="#bio">Bio</a></li>
+            <li><a class="nav-anchor anchor-effects" href="#education">Education</a></li>
+            <li><a class="nav-anchor anchor-effects" href="#hobbies">Hobbies</a></li>
         </ul>
     </nav>
     <main>
@@ -34,7 +37,7 @@
             <div class="section-text">
                 <div>
                     <h2>Bio</h2>
-                    <h3>about me</h3>
+                    <h3><em>about me</em></h3>
                 </div>
                 <p>Hi, I'm <mark>Nathan Lodge</mark>, I'm <mark>18</mark> and a <mark>3rd</mark>
                     term Software Engineering student at NEIT. I was born & raised in <mark>Windsor, CT</mark>.
@@ -52,19 +55,23 @@
             <div class="section-text">
                 <div>
                     <h2>Education</h2>
-                    <h3>the schools i've attended.</h3>
+                    <h3><strong>the schools i've attended</strong></h3>
                 </div>
-                <ul class="vert-list">
+                <ul class="vert-list education-list">
                     <li class="list-item">
                         <h3>
-                            Sage Park Middle School
+                            <a class="anchor-inherit" href="https://www.windsorct.org/o/spms" target="_blank">
+                                Sage Park Middle School
+                            </a>
                         </h3>
                         <p class="list-paragraph">The first school attended that I have pictured (bottom) is SPMS, a
                             middle school that is located in <mark>Windsor, CT</mark>.</p>
                     </li>
                     <li class="list-item">
                         <h3>
-                            Windsor High School
+                            <a class="anchor-inherit" href="https://www.windsorct.org/o/whs" target="_blank">
+                                Windsor High School
+                            </a>
                         </h3>
                         <p class="list-paragraph">
                             After middle school, I attended Windsor High School for four years and graduated in
@@ -74,7 +81,9 @@
                     </li>
                     <li class="list-item">
                         <h3>
-                            New England Institute of Technology
+                            <a class="anchor-inherit" href="https://www.neit.edu" target="_blank">
+                                New England Institute of Technology
+                            </a>
                         </h3>
                         <p class="list-paragraph">
                             Currently, I am attending NEIT and am in my third term. I am majoring in <mark>Software
@@ -96,9 +105,9 @@
             <div class="section-text">
                 <div>
                     <h2>Hobbies</h2>
-                    <h3>my hobbies/interests include:</h3>
+                    <h3><b><i>my hobbies/interests include:</i></b></h3>
                 </div>
-                <ul class="vert-list">
+                <ol class="vert-list hobbies-list">
                     <li class="list-item">
                         <p class="list-paragraph">coding</p>
                     </li>
@@ -110,7 +119,7 @@
                     <li class="list-item">
                         <p class="list-paragraph">playing video games</p>
                     </li>
-                </ul>
+                </ol>
             </div>
             <div class="section-imgs">
                 <div class="img-container multiple">
@@ -130,7 +139,7 @@
             </p>
             <ul class="horiz-list">
                 <li>
-                    <a href="../index.html">
+                    <a class="anchor-effects" href="../index.html">
                         Link to week 1 page
                     </a>
                 </li>
