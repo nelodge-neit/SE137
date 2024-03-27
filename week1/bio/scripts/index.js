@@ -10,13 +10,13 @@ const anchors = Array.from(document.querySelectorAll(".nav-anchor"));
  */
 const onClick = (e) => {
   e.preventDefault();
-  
+
   /**
    * @type {HTMLAnchorElement}
    */
   const anchor = e.currentTarget;
   const index = anchors.indexOf(anchor);
-  const sections = document.querySelectorAll("section");
+  const sections = document.querySelectorAll(".section");
 
   for (const section of sections) {
     section.classList.add("hide");

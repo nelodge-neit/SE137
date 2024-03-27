@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <nav id="nav">
+    <div id="nav">
         <div class="nav-left">
             <h1>
                 <button class="nav-button" onclick="this.scrollTo({top:0})">
@@ -26,17 +26,17 @@
             <hr class="vert-divider">
         </div>
         <ul class="horiz-list">
-            <li><a class="nav-anchor anchor-effects" href="#bio">Bio</a></li>
-            <li><a class="nav-anchor anchor-effects" href="#education">Education</a></li>
-            <li><a class="nav-anchor anchor-effects" href="#hobbies">Hobbies</a></li>
+            <li><a class="nav-anchor anchor-effects" href="#">Bio</a></li>
+            <li><a class="nav-anchor anchor-effects" href="#">Education</a></li>
+            <li><a class="nav-anchor anchor-effects" href="#">Hobbies</a></li>
         </ul>
-    </nav>
-    <main id="main">
+    </div>
+    <div id="main">
         <!-- bio section -->
-        <section id="bio">
+        <div id="bio" class="section">
             <div class="section-text">
                 <div>
-                    <h2>Bio</h2>
+                    <h2>My Bio</h2>
                     <h3><em>about me</em></h3>
                 </div>
                 <p>Hi, I'm <mark>Nathan Lodge</mark>, I'm <mark>18</mark> and a <mark>3rd</mark>
@@ -49,12 +49,12 @@
                         alt="a reflection of me (Nathan Lodge) holding up a peace sign in front of a laptop with Visual Studio Code open">
                 </div>
             </div>
-        </section>
+        </div>
         <!-- education section -->
-        <section id="education" class="hide">
+        <div id="ed" class="section hide">
             <div class="section-text">
                 <div>
-                    <h2>Education</h2>
+                    <h2>Schooling</h2>
                     <h3><strong>the schools i've attended</strong></h3>
                 </div>
                 <ul class="vert-list education-list">
@@ -101,9 +101,9 @@
                         alt="a picture of the New England Tech main campus">
                 </div>
             </div>
-        </section>
+        </div>
         <!-- hobbies section -->
-        <section id="hobbies" class="hide">
+        <div id="hobbies" class="section hide">
             <div class="section-text">
                 <div>
                     <h2>Hobbies</h2>
@@ -131,9 +131,9 @@
                         alt="a blurry picture of me hanging out with 3 of my friends">
                 </div>
             </div>
-        </section>
-    </main>
-    <footer id="footer">
+        </div>
+    </div>
+    <div id="footer">
         <div class="footer-content">
             <p>
                 If you'd like to learn more about me: feel free to check out my personal website which can be found at:
@@ -150,7 +150,7 @@
         <div>
             &copy; 2024 Nathan Lodge | Week 1 Assignment
         </div>
-    </footer>
+    </div>
 </body>
 
 </html>

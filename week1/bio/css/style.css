@@ -51,7 +51,7 @@ hr {
   display: block;
 }
 
-nav {
+#nav {
   height: 124px;
   padding: 1em max(4em, 10%);
   display: flex;
@@ -69,7 +69,7 @@ nav {
   gap: 40px;
 }
 
-main {
+#main {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -80,7 +80,7 @@ main {
   background: hsl(60, 57%, 91%);
 }
 
-section {
+.section {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -100,7 +100,7 @@ section {
   }
 }
 
-section:nth-of-type(even) {
+.section:nth-of-type(even) {
   flex-direction: row-reverse;
 }
 
@@ -232,7 +232,7 @@ a:active {
   --anchor-scale: 0.93;
 }
 
-footer {
+#footer {
   padding: 1em max(4em, 10%);
   display: flex;
   flex-direction: column;
