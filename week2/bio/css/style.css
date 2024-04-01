@@ -11,6 +11,10 @@
 :root {
   --dark: hsl(60, 30%, 82%);
   --ease: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  --sans: "DM Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  --mono: "Source Code Pro", "JetBrains Mono", "Courier New", monospace;
 }
 
 html {
@@ -21,8 +25,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
-  font-family: "Monaspace Krypton", "Source Code Pro", "JetBrains Mono",
-    "Courier New", monospace;
+  font-family: var(--sans);
   font-size: 16px;
   background: var(--dark);
   scroll-padding: 4em;
@@ -58,9 +61,10 @@ button:active {
 
 p {
   color: hsl(30 10% 10% / 1);
-  font-weight: 500;
   max-width: 800px;
+  font-weight: 500;
   font-size: 18px;
+  font-family: var(--mono);
 }
 
 mark {
@@ -77,14 +81,8 @@ a {
   text-underline-offset: 3px;
 }
 
-a:hover {
-  --anchor-translate: -3px;
-  --anchor-scale: 1.02;
-}
-
-a:active {
-  --anchor-translate: -1px;
-  --anchor-scale: 0.93;
+.anchor-inherit {
+  color: inherit;
 }
 
 .anchor-effects {
@@ -92,8 +90,24 @@ a:active {
   transform: translateY(var(--anchor-translate)) scale(var(--anchor-scale));
 }
 
-.anchor-inherit {
-  color: inherit;
+.anchor-effects-parent:hover > .anchor-effects.scale {
+  --anchor-translate: -3px;
+  --anchor-scale: 1.02;
+}
+
+.anchor-effects-parent:active > .anchor-effects.scale {
+  --anchor-translate: -1px;
+  --anchor-scale: 0.93;
+}
+
+.anchor-effects-parent:hover > .anchor-effects.pop {
+  --anchor-translate: -4px;
+  --anchor-scale: 1;
+}
+
+.anchor-effects-parent:active > .anchor-effects.pop {
+  --anchor-translate: -2px;
+  --anchor-scale: 1;
 }
 
 .vert-divider {
@@ -120,7 +134,7 @@ a:active {
 
 /* -- NAV -- */
 
-#nav {
+nav {
   height: 124px;
   padding: 1em max(4em, 10%);
   display: flex;
@@ -139,10 +153,15 @@ a:active {
 }
 
 .nav-button {
+  font-family: var(--mono);
   font-size: 3rem;
-  font-weight: 900;
+  font-weight: 700;
+  text-transform: uppercase;
   letter-spacing: -4px;
   color: rgba(0, 0, 0, 0.85);
+  padding-right: 20px;
+  line-height: 1.25;
+  border-right: 1px solid black;
 }
 
 .nav-anchor {

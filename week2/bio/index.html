@@ -10,25 +10,26 @@
     <title>NL SE137 | Biography</title>
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preload" href="fonts/MonaspaceKrypton-ExtraLightItalic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
     <link rel="prefetch" href="images/selfie.jpg">
     <script defer src="./scripts/index.js"></script>
 </head>
 
 <body>
     <nav id="nav">
-        <div class="nav-left">
-            <h1>
-                <button class="nav-button" onclick="this.scrollTo({top:0})">
-                    nl
-                </button>
-            </h1>
-            <hr class="vert-divider">
-        </div>
+        <h1>
+            <button class="nav-button" onclick="this.scrollTo({top:0})">
+                nl
+            </button>
+        </h1>
         <ul class="horiz-list">
-            <li><a class="nav-anchor anchor-effects" href="#">Bio</a></li>
-            <li><a class="nav-anchor anchor-effects" href="#">Education</a></li>
-            <li><a class="nav-anchor anchor-effects" href="#">Hobbies</a></li>
+            <li class="anchor-effects-parent"><a class="nav-anchor anchor-effects scale" href="#">Bio</a></li>
+            <li class="anchor-effects-parent"><a class="nav-anchor anchor-effects scale" href="#">Education</a></li>
+            <li class="anchor-effects-parent"><a class="nav-anchor anchor-effects scale" href="#">Hobbies</a></li>
         </ul>
     </nav>
     <main id="main">
@@ -59,8 +60,9 @@
                 </div>
                 <ul class="vert-list education-list">
                     <li class="list-item">
-                        <h3>
-                            <a class="anchor-inherit" href="https://www.windsorct.org/o/spms" target="_blank">
+                        <h3 class="anchor-effects-parent">
+                            <a class="anchor-inherit anchor-effects pop" href="https://www.windsorct.org/o/spms"
+                                target="_blank">
                                 Sage Park Middle School
                             </a>
                         </h3>
@@ -68,8 +70,9 @@
                             middle school that is located in <mark>Windsor, CT</mark>.</p>
                     </li>
                     <li class="list-item">
-                        <h3>
-                            <a class="anchor-inherit" href="https://www.windsorct.org/o/whs" target="_blank">
+                        <h3 class="anchor-effects-parent">
+                            <a class="anchor-inherit anchor-effects pop" href="https://www.windsorct.org/o/whs"
+                                target="_blank">
                                 Windsor High School
                             </a>
                         </h3>
@@ -80,8 +83,8 @@
                         </p>
                     </li>
                     <li class="list-item">
-                        <h3>
-                            <a class="anchor-inherit" href="https://www.neit.edu" target="_blank">
+                        <h3 class="anchor-effects-parent">
+                            <a class="anchor-inherit anchor-effects pop" href="https://www.neit.edu" target="_blank">
                                 New England Institute of Technology
                             </a>
                         </h3>
@@ -140,16 +143,16 @@
                 <mark><a href="https://hexiro.me">hexiro.me</a></mark>.
             </p>
             <ul class="horiz-list">
-                <li>
-                    <a class="anchor-effects" href="../index.html">
+                <li class="anchor-effects-parent">
+                    <a class="anchor-effects scale" href="../index.html">
                         Link to week 1 page
                     </a>
                 </li>
             </ul>
         </div>
-        <div>
+        <p class="footer-paragraph">
             &copy; 2024 Nathan Lodge | Week 1 Assignment
-        </div>
+        </p>
     </footer>
 </body>
 
