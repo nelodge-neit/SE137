@@ -5,13 +5,28 @@
 *::after {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
 }
 
 :root {
-  --dark: hsl(60, 30%, 82%);
-  --ease: cubic-bezier(0.075, 0.82, 0.165, 1);
+  /* colors */
+  --primary: hsl(349, 86%, 56%);
+  --secondary: hsl(356, 100%, 76%);
+  --black: hsl(0, 91%, 5%);
+  --white: hsl(38, 66%, 92%);
+  --gray: hsl(0, 6%, 35%);
+  /* opacity shifting colors */
+  --modifier-base: 0, 0, 0;
+  --modifier-05: rgba(var(--modifier-base), 0.05);
+  --modifier-25: rgba(var(--modifier-base), 0.25);
+  --modifier-60: rgba(var(--modifier-base), 0.6);
+  --modifier-75: rgba(var(--modifier-base), 0.75);
+  --modifier-85: rgba(var(--modifier-base), 0.85);
 
+  /* transitions */
+  --ease: cubic-bezier(0.075, 0.82, 0.165, 1);
+  /* fonts */
   --sans: "DM Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif;
   --mono: "Source Code Pro", "JetBrains Mono", "Courier New", monospace;
@@ -27,26 +42,20 @@ body {
   min-height: 100dvh;
   font-family: var(--sans);
   font-size: 16px;
-  background: var(--dark);
   scroll-padding: 4em;
+  background: var(--white);
+  color: var(--black);
 }
 
 svg {
   display: block;
 }
 
-hr {
-  display: block;
-  width: 100%;
-  border-color: var(--dark);
-}
-
 button {
   cursor: pointer;
-  padding: 0;
-  border: 0;
   background: none;
   font-family: inherit;
+  color: inherit;
   transition: var(--ease) transform 200ms;
   transform: scale(var(--btn-scale));
 }
@@ -60,15 +69,16 @@ button:active {
 }
 
 p {
-  color: hsl(30 10% 10% / 1);
+  color: var(--gray);
   max-width: 800px;
   font-weight: 500;
   font-size: 18px;
   font-family: var(--mono);
+  line-height: 1.5;
 }
 
 mark {
-  background-color: hsla(30, 20%, 50%, 0.5);
+  background-color: var(--modifier-25);
   padding: 0.05em 0.25em;
   border-radius: 0.125em;
 }
@@ -76,7 +86,7 @@ mark {
 a {
   display: inline-block;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--modifier-60);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -140,7 +150,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--dark);
+  background-color: var(--modifier-05);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -148,24 +158,23 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 100%;
-  gap: 40px;
+  padding-right: 40px;
+  border-right: 1px solid var(--gray);
 }
 
 .nav-button {
   font-family: var(--mono);
   font-size: 3rem;
   font-weight: 700;
+  color: var(--primary);
   text-transform: uppercase;
   letter-spacing: -4px;
-  color: rgba(0, 0, 0, 0.85);
-  padding-right: 20px;
   line-height: 1.25;
-  border-right: 1px solid black;
 }
 
 .nav-anchor {
   display: block;
+  color: var(--secondary);
 }
 
 /* -- MAIN -- */
@@ -178,7 +187,7 @@ main {
   align-items: center;
   justify-content: center;
   padding: 4em max(4em, 10%);
-  background: hsl(60, 57%, 91%);
+  background: var(--white);
 }
 
 /* -- SECTION -- */
@@ -193,18 +202,22 @@ section {
 
   h2 {
     font-weight: 700;
-    color: rgba(0, 0, 0, 0.85);
+    font-size: 1.5rem;
+    color: var(--primary);
   }
 
   h3 {
     font-weight: 600;
     margin-bottom: 0.375em;
-    color: rgba(0, 0, 0, 0.75);
   }
 }
 
 section:nth-of-type(even) {
   flex-direction: row-reverse;
+
+  .section-imgs {
+    align-items: flex-start;
+  }
 }
 
 .section-text,
@@ -221,14 +234,14 @@ section:nth-of-type(even) {
 }
 
 .section-imgs {
-  align-items: center;
+  align-items: flex-end;
 }
 
 .img-container {
   position: relative;
   flex-shrink: 0;
   padding: 0.65em;
-  background: var(--dark);
+  background: var(--secondary);
   border: 2px solid rgba(0, 0, 0, 0.04);
   border-radius: 1.15em;
 }
@@ -285,7 +298,7 @@ footer {
   flex-direction: column;
   gap: 0.25rem;
   align-items: center;
-  background: rgba(0, 0, 0, 0.04);
+  background: var(--modifier-05);
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -318,12 +331,12 @@ footer {
 .list-item {
   font-weight: 700;
   font-size: 18px;
-  color: rgba(0, 0, 0, 0.85);
+  color: var(--modifier-85);
 }
 
 .list-paragraph {
   margin-top: 0.125em;
-  color: rgba(0, 0, 0, 0.75);
+  color: var(--modifier-85);
 }
 
 .hide {
