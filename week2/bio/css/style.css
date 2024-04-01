@@ -4,6 +4,7 @@
 *::before,
 *::after {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -37,21 +38,87 @@ hr {
   border-color: var(--dark);
 }
 
+button {
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: inherit;
+  transition: var(--ease) transform 200ms;
+  transform: scale(var(--btn-scale));
+}
+
+button:hover {
+  --btn-scale: 1.1;
+}
+
+button:active {
+  --btn-scale: 0.9;
+}
+
+p {
+  color: hsl(30 10% 10% / 1);
+  font-weight: 500;
+  max-width: 800px;
+  font-size: 18px;
+}
+
+mark {
+  background-color: hsla(30, 20%, 50%, 0.5);
+  padding: 0.05em 0.25em;
+  border-radius: 0.125em;
+}
+
+a {
+  display: inline-block;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  --anchor-translate: -3px;
+  --anchor-scale: 1.02;
+}
+
+a:active {
+  --anchor-translate: -1px;
+  --anchor-scale: 0.93;
+}
+
+.anchor-effects {
+  transition: var(--ease) transform 250ms;
+  transform: translateY(var(--anchor-translate)) scale(var(--anchor-scale));
+}
+
+.anchor-inherit {
+  color: inherit;
+}
+
 .vert-divider {
   width: auto;
   height: 75%;
   border-right: 1px solid;
 }
 
-.nav-button {
-  font-size: 3rem;
-  letter-spacing: -4px;
-  color: rgba(0, 0, 0, 0.85);
+.horiz-list {
+  display: flex;
+  gap: 3em;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
-.nav-anchor {
-  display: block;
+.vert-list {
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65em;
 }
+
+/* -- NAV -- */
 
 #nav {
   height: 124px;
@@ -71,7 +138,20 @@ hr {
   gap: 40px;
 }
 
-#main {
+.nav-button {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -4px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.nav-anchor {
+  display: block;
+}
+
+/* -- MAIN -- */
+
+main {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -82,7 +162,9 @@ hr {
   background: hsl(60, 57%, 91%);
 }
 
-.section {
+/* -- SECTION -- */
+
+section {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -102,7 +184,7 @@ hr {
   }
 }
 
-.section:nth-of-type(even) {
+section:nth-of-type(even) {
   flex-direction: row-reverse;
 }
 
@@ -176,65 +258,9 @@ hr {
   bottom: 0.65em;
 }
 
-button {
-  cursor: pointer;
-  padding: 0;
-  border: 0;
-  background: none;
-  font-family: inherit;
-  transition: var(--ease) transform 200ms;
-  transform: scale(var(--btn-scale));
-}
+/* -- FOOTER -- */
 
-button:hover {
-  --btn-scale: 1.1;
-}
-
-button:active {
-  --btn-scale: 0.9;
-}
-
-p {
-  color: hsl(30 10% 10% / 1);
-  font-weight: 500;
-  max-width: 800px;
-  font-size: 18px;
-}
-
-mark {
-  background-color: hsla(30, 20%, 50%, 0.5);
-  padding: 0.05em 0.25em;
-  border-radius: 0.125em;
-}
-
-a {
-  display: inline-block;
-  font-weight: 600;
-  color: rgba(0, 0, 0, 0.6);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.anchor-effects {
-  transition: var(--ease) transform 250ms;
-  transform: translateY(var(--anchor-translate)) scale(var(--anchor-scale));
-}
-
-.anchor-inherit {
-  color: inherit;
-}
-
-a:hover {
-  --anchor-translate: -3px;
-  --anchor-scale: 1.02;
-}
-
-a:active {
-  --anchor-translate: -1px;
-  --anchor-scale: 0.93;
-}
-
-#footer {
+footer {
   padding: 1em max(4em, 10%);
   display: flex;
   flex-direction: column;
@@ -242,46 +268,24 @@ a:active {
   align-items: center;
   background: rgba(0, 0, 0, 0.04);
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-
-  p {
-    max-width: 500px;
-    font-size: 1em;
-  }
-
-  .footer-content {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1em;
-  }
-
-  hr {
-    margin: 1em 0;
-  }
-
-  img {
-    width: 50%;
-    margin: 0 auto;
-    border-radius: 0.25em;
-  }
 }
 
-.horiz-list {
+.footer-paragraph {
+  max-width: 500px;
+  font-size: 1em;
+}
+
+.footer-content {
   display: flex;
-  gap: 3em;
-  list-style: none;
+  width: 100%;
+  flex-direction: row;
   align-items: center;
-  padding: 0;
-  margin: 0;
+  justify-content: space-between;
+  gap: 1em;
 }
 
-.vert-list {
-  margin-top: 0.5em;
-  display: flex;
-  flex-direction: column;
-  gap: 0.65em;
+.footer-divider {
+  margin: 1em 0;
 }
 
 .hobbies-list {
