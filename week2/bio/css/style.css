@@ -151,7 +151,8 @@ nav {
   padding: 1em max(4em, 10%);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 40px;
   border-bottom: 1px solid;
   border-color: hsl(0, var(--gray-saturation), 80%);
   background-color: hsl(var(--white-hue), var(--white-saturation), 90%);
@@ -166,7 +167,7 @@ nav {
   border-color: hsl(0, var(--gray-saturation), 80%);
 }
 
-.nav-button {
+#nav-button {
   font-family: var(--mono);
   font-size: 3rem;
   font-weight: 700;
@@ -209,10 +210,6 @@ section {
 
 section:nth-of-type(even) {
   flex-direction: row-reverse;
-
-  .section-imgs {
-    align-items: flex-start;
-  }
 }
 
 .section-text > div {
@@ -244,7 +241,7 @@ section:nth-of-type(even) {
 }
 
 .section-imgs {
-  align-items: flex-end;
+  align-items: center;
 }
 
 .img-container {
