@@ -14,8 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=block"
         rel="stylesheet">
-    <link rel="prefetch" href="images/selfie.jpg">
-    <script defer src="./scripts/index.js"></script>
+    <link rel="prefetch" href="images/eclipse_selfie.webp">
 </head>
 
 <body>
@@ -28,18 +27,20 @@
             </h1>
         </div>
         <ul class="horiz-list">
-            <li class="anchor-effects-parent"><a class="nav-anchor anchor-effects scale" href="#">Bio</a></li>
-            <li class="anchor-effects-parent"><a class="nav-anchor anchor-effects scale" href="#">Education</a></li>
-            <li class="anchor-effects-parent"><a class="nav-anchor anchor-effects scale" href="#">Hobbies</a></li>
+            <li class="anchor-effects-parent"><a class="nav-anchor anchor-effects scale" href="#about">About Me</a></li>
+            <li class="anchor-effects-parent"><a class="nav-anchor anchor-effects scale" href="#education">Education</a>
+            </li>
+            <li class="anchor-effects-parent"><a class="nav-anchor anchor-effects scale" href="#hobbies">Hobbies</a>
+            </li>
         </ul>
     </nav>
     <main id="main">
-        <!-- bio section -->
-        <section id="bio">
+        <!-- about me section -->
+        <section id="about">
             <div class="section-text">
-                <div>
-                    <h2>My Bio</h2>
-                    <h3>about me</h3>
+                <div class="section-heading">
+                    <h2>About Me</h2>
+                    <h3>learn more about my life</h3>
                 </div>
                 <p>Hi, I'm <span class="highlight">Nathan Lodge</span>, I'm <span class="highlight">18</span> and a
                     <span class="highlight">3rd</span>
@@ -49,67 +50,56 @@
             </div>
             <div class="section-imgs">
                 <div class="img-container">
-                    <img class="img-container-img" src="images/selfie.jpg"
-                        alt="a reflection of me (Nathan Lodge) holding up a peace sign in front of a laptop with Visual Studio Code open">
+                    <img class="img-container-img" src="images/eclipse_selfie.webp"
+                        alt="a picture of me (Nathan Lodge) laying down with solar eclipse glasses on during the April 8 2024 solar eclipse">
+                    <!-- alt="a reflection of me (Nathan Lodge) holding up a peace sign in front of a laptop with Visual Studio Code open"> -->
                 </div>
             </div>
         </section>
         <!-- education section -->
-        <section id="ed" class="hide">
-            <div class="section-text">
-                <div>
-                    <h2>Schooling</h2>
-                    <h3>the schools i've attended</h3>
-                </div>
-                <ul class="vert-list education-list">
-                    <li class="list-item anchor-effects-parent">
-                        <a class="school-anchor anchor-inherit anchor-effects pop"
-                            href="https://www.windsorct.org/o/spms" target="_blank">
-                            Sage Park Middle School
-                        </a>
-                        <p class="list-paragraph small-paragraph">The first school attended that I have pictured
-                            (bottom) is SPMS, a
-                            middle school that is located in <span class="highlight">Windsor, CT</span>.</p>
-                    </li>
-                    <li class="list-item anchor-effects-parent">
-                        <a class="school-anchor anchor-inherit anchor-effects pop"
-                            href="https://www.windsorct.org/o/whs" target="_blank">
-                            Windsor High School
-                        </a>
-                        <p class="list-paragraph small-paragraph">
-                            After middle school, I attended Windsor High School for four years and graduated in
-                            <span class="highlight">2023</span>. At WHS I took <span class="highlight">AP Computer
-                                Science</span> and <span class="highlight">AP Computer
-                                Science Principles</span>.
-                        </p>
-                    </li>
-                    <li class="list-item anchor-effects-parent">
-                        <a class="school-anchor anchor-inherit anchor-effects pop" href="https://www.neit.edu"
-                            target="_blank">
-                            New England Institute of Technology
-                        </a>
-                        <p class="list-paragraph small-paragraph">
-                            Currently, I am attending NEIT and am in my third term. I am majoring in <span
-                                class="highlight">Software
-                                Engineering</span> and am expected to graduate in <span class="highlight">2026</span>.
-                        </p>
-                    </li>
-                </ul>
+        <section id="education">
+            <div class="section-heading">
+                <h2>Education</h2>
+                <h3>the schools i've attended</h3>
             </div>
-            <div class="section-imgs">
-                <div class="img-container multiple">
-                    <img class="img-container-img img-spms" src="images/spms.jpg"
-                        alt="a picture of Sage Park Middle School">
-                    <img class="img-container-img img-whs" src="images/whs.jpg" alt="a picture of Windsor High School">
-                    <img class="img-container-img img-neit" src="images/neit.jpg"
-                        alt="a picture of the New England Tech main campus">
-                </div>
-            </div>
+            <ul class="vert-list education-list">
+                <li class="list-item anchor-effects-parent">
+                    <a class="school-anchor anchor-inherit anchor-effects pop" href="https://www.windsorct.org/o/spms"
+                        target="_blank">
+                        Sage Park Middle School
+                    </a>
+                    <p class="list-paragraph small-paragraph">The first school attended that I have pictured is
+                        SPMS, a middle school that is located in <span class="highlight">Windsor, CT</span>.</p>
+                </li>
+                <li class="list-item anchor-effects-parent">
+                    <a class="school-anchor anchor-inherit anchor-effects pop" href="https://www.windsorct.org/o/whs"
+                        target="_blank">
+                        Windsor High School
+                    </a>
+                    <p class="list-paragraph small-paragraph">
+                        After middle school, I attended Windsor High School for four years and graduated in
+                        <span class="highlight">2023</span>. At WHS I took <span class="highlight">AP Computer
+                            Science</span> and <span class="highlight">AP Computer
+                            Science Principles</span>.
+                    </p>
+                </li>
+                <li class="list-item anchor-effects-parent">
+                    <a class="school-anchor anchor-inherit anchor-effects pop" href="https://www.neit.edu"
+                        target="_blank">
+                        New England Institute of Technology
+                    </a>
+                    <p class="list-paragraph small-paragraph">
+                        Currently, I am attending NEIT and am in my third term. I am majoring in <span
+                            class="highlight">Software
+                            Engineering</span> and am expected to graduate in <span class="highlight">2026</span>.
+                    </p>
+                </li>
+            </ul>
         </section>
         <!-- hobbies section -->
-        <section id="hobbies" class="hide">
+        <section id="hobbies">
             <div class="section-text">
-                <div>
+                <div class="section-heading">
                     <h2>Hobbies</h2>
                     <h3>my hobbies/interests include:</h3>
                 </div>
@@ -127,31 +117,25 @@
                     </li>
                 </ol>
             </div>
-            <div class="section-imgs">
+            <!-- <div class="section-imgs">
                 <div class="img-container multiple">
                     <img class="img-container-img img-friends-1" src="images/friends1.jpg"
                         alt="a picture of me in a car with two of my friends from home">
                     <img class="img-container-img img-friends-2" src="images/friends2.jpg"
                         alt="a blurry picture of me hanging out with 3 of my friends">
                 </div>
-            </div>
+            </div> -->
         </section>
     </main>
     <footer id="footer">
-        <div class="footer-content">
-            <p class="anchor-effects-parent footer-paragraph">
-                If you'd like to learn more about me, feel free to check out my personal website, which can be found at
-                <a href="https://hexiro.me" class="anchor-effects scale">hexiro.me</a>.
-            </p>
-            <div class="anchor-effects-parent">
-                <a class="anchor-effects scale" href="../index.html">
-                    Link to week 3 page
-                </a>
-            </div>
-        </div>
         <p class="footer-paragraph">
             &copy; 2024 Nathan Lodge | Week 3 Assignment
         </p>
+        <div class="anchor-effects-parent">
+            <a class="anchor-effects scale" href="../index.html">
+                Link to week 3 page
+            </a>
+        </div>
     </footer>
 </body>
 
