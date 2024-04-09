@@ -74,7 +74,7 @@ button:active {
 
 p {
   color: var(--gray);
-  max-width: 800px;
+  max-width: 500px;
   font-weight: 500;
   font-size: 1rem;
   font-family: var(--mono);
@@ -207,6 +207,10 @@ main {
   grid-area: about;
   align-items: center;
   flex-direction: row;
+
+  .section-imgs {
+    align-items: flex-end;
+  }
 }
 
 #education {
@@ -220,6 +224,18 @@ main {
   grid-area: hobbies;
   flex-direction: row;
   align-items: flex-start;
+  gap: 0.75rem;
+  height: 100%;
+
+  .section-text {
+    width: 100%;
+  }
+
+  .section-imgs {
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 100%;
+  }
 }
 
 section {
@@ -247,20 +263,27 @@ section {
 
 .section-text,
 .section-imgs {
-  width: 50%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  gap: 0.75rem;
 }
 
 .section-text {
   height: 100%;
+  flex-grow: 1;
   gap: 0.75rem;
+  justify-content: flex-start;
 }
 
-.section-imgs {
+#hobbies-text-with-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: flex-end;
+  flex-grow: 1;
+  height: 100%;
 }
 
 .img-container {
@@ -274,8 +297,8 @@ section {
 }
 
 .img-container.multiple {
-  width: calc(300px + 0.65em * 2);
-  height: calc(300px + 0.65em * 2);
+  width: calc(200px + 0.75em * 2);
+  height: calc(200px + 0.75em * 2);
 }
 
 .img-container-img {
@@ -284,6 +307,22 @@ section {
   border: 1px solid;
   border-color: var(--primary);
   border-radius: 0.5em;
+}
+
+.img-container-small-width-img,
+.img-container-small-height-img {
+  display: block;
+  border: 1px solid;
+  border-color: var(--primary);
+  border-radius: 0.5em;
+}
+
+.img-container-small-width-img {
+  width: 200px;
+}
+
+.img-container-small-height-img {
+  height: 200px;
 }
 
 .img-whs,
