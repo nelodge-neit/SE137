@@ -178,6 +178,16 @@ h1 {
   padding-bottom: 1.25rem;
 }
 
+.text-anniversary {
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 0.5rem 0;
+  font-weight: 400;
+  font-family: var(--rock-salt);
+  color: var(--red);
+  border-bottom: var(--red-border);
+}
+
 .left-purchase {
   display: flex;
   flex-direction: row;
@@ -212,18 +222,23 @@ h1 {
   text-underline-offset: 10px;
 }
 
-.text-anniversary {
-  font-size: 1.25rem;
-  text-align: center;
-  padding: 0.5rem 0;
-  font-weight: 400;
-  font-family: var(--rock-salt);
-  color: var(--red);
-  border-bottom: var(--red-border);
+.right {
+  padding: 1.5rem;
+  grid-area: right;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
-.right {
-  grid-area: right;
+.right-flag {
+  width: 100%;
+  height: auto;
+  border: var(--dashed-border);
+  padding-right: 0.75rem;
+}
+
+.right-paragraph {
+  font-size: 1.5rem;
 }
 
 .socials-group {
