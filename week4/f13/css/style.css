@@ -12,6 +12,8 @@
   --roboto: "Roboto", sans-serif;
   --poppins: "Poppins", sans-serif;
   --rock-salt: "Rock Salt", cursive;
+  /* transitions */
+  --ease: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 /* RESETS */
@@ -89,6 +91,21 @@ h1 {
   font-size: 3rem;
   font-weight: 400;
   align-self: last baseline;
+}
+
+.anchor-effects {
+  transition: var(--ease) transform 250ms;
+  transform: translateY(var(--anchor-translate)) scale(var(--anchor-scale));
+}
+
+.anchor-effects-parent:hover > .anchor-effects.scale {
+  --anchor-translate: -3px;
+  --anchor-scale: 1.02;
+}
+
+.anchor-effects-parent:active > .anchor-effects.scale {
+  --anchor-translate: -1px;
+  --anchor-scale: 0.93;
 }
 
 .red {
@@ -280,6 +297,7 @@ h1 {
 }
 
 .social-link {
+  display: inline-block;
   color: inherit;
 }
 .social-list-item {
