@@ -163,10 +163,53 @@ h1 {
   width: auto;
 }
 
-.left-content {
+.left-content-text {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+}
+
+.left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.25rem;
+  padding-right: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.left-purchase {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-purchase-dvd {
+  height: 148px;
+  width: auto;
+}
+
+.left-purchase-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-purchase-link {
+  color: rgb(34, 193, 203);
+}
+
+.left-purchase-link:visited {
+  color: var(--red);
+}
+
+.left-purchase-price {
+  font-family: var(--teko);
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: underline;
+  text-underline-offset: 10px;
 }
 
 .text-anniversary {
