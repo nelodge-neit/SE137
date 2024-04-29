@@ -2,9 +2,15 @@
 
 :root {
   /* colors */
-  --black: rgb(7, 7, 7);
+  --white: rgb(227, 227, 227);
+  --blue: rgb(2, 84, 160);
+  --dark-600: rgb(80, 80, 80);
+  --dark-700: rgb(55, 55, 55);
+  --dark-800: rgb(22, 22, 22);
+  --dark-900: rgb(6, 6, 6);
   /* fonts */
   --roboto: "Roboto", sans-serif;
+  --mono: monospace;
   /* transitions */
   --ease: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -23,13 +29,11 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   font-size: 16px;
   font-family: var(--roboto);
-  min-height: 100dvh;
-  background: var(--black);
+  height: 100dvh;
   color: var(--white);
+  background: var(--dark-600);
 }
 
 svg {
@@ -45,3 +49,97 @@ li {
 }
 
 /* content styling */
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  height: 1.5rem;
+  margin-left: 4rem;
+  padding-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--dark-600);
+}
+
+footer {
+  height: 1rem;
+  border-top: 1px solid var(--white);
+  background-color: var(--blue);
+}
+
+section {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+}
+
+aside {
+  height: 100%;
+  width: 4rem;
+  flex-shrink: 0;
+  background-color: var(--dark-600);
+}
+
+#tray {
+  width: 144px;
+  background-color: var(--dark-700);
+  flex-shrink: 0;
+}
+
+#program {
+  display: flex;
+  height: 100%;
+  background-color: var(--dark-900);
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+nav {
+  height: 34px;
+  background-color: var(--dark-800);
+}
+
+#breadcrumbs {
+  height: 23px;
+  background-color: var(--dark-900);
+}
+
+textarea {
+  resize: none;
+  color: white;
+  height: 100%;
+  width: 100%;
+  padding: 1em 2em;
+  font-family: var(--mono);
+  background-color: var(--dark-900);
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.icon-settings {
+  width: 16px;
+  height: 16px;
+}
+
+/* helper classes */
+.horiz-list {
+  display: flex;
+  height: 100%;
+  gap: 1rem;
+  align-items: center;
+}
+
+.roboto-sm {
+  font-family: var(--roboto);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 0.875rem;
+}
