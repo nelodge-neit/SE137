@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+:root {
+  /* colors */
+  --black: rgb(7, 7, 7);
+  /* fonts */
+  --roboto: "Roboto", sans-serif;
+  /* transitions */
+  --ease: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-family: var(--roboto);
+  min-height: 100dvh;
+  background: var(--black);
+  color: var(--white);
+}
+
+svg {
+  display: block;
+}
+
+a {
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+/* content styling */
