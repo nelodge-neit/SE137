@@ -145,8 +145,15 @@ nav {
 }
 
 #breadcrumbs {
-  height: 23px;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
   background-color: var(--dark-900);
+  padding: 4px 10px;
+}
+
+.breadcrumb {
+  color: var(--blue);
 }
 
 textarea {

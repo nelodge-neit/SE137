@@ -1,6 +1,9 @@
 // TAB CONTROLS
 
 const tabs = Array.from(document.querySelectorAll(".tab-button"));
+const breadcrumbsLinks = Array.from(
+  document.querySelectorAll("#breadcrumbs a")
+);
 
 for (const tab of tabs) {
   const onClick = (e) => {
@@ -11,8 +14,7 @@ for (const tab of tabs) {
     const target = e.currentTarget;
     target.classList.add("active");
 
-    const breadcrumbs = document.querySelector("#breadcrumbs");
-    breadcrumbs.innerHTML = `<a href="#">${target.textContent}</a>`;
+    breadcrumbsLinks.at(-1).textContent = target.textContent;
   };
 
   tab.addEventListener("click", onClick);
