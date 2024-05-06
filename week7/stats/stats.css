@@ -1,23 +1,29 @@
 html,
 body {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
 }
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 16px;
+  font-family: "Space Mono", monospace;
 }
 table {
   width: 80%;
   border-collapse: collapse;
+  margin-bottom: 2em;
 }
 td {
   border-bottom: 1px solid black;
 }
 h1 {
   text-align: center;
+  margin: 1em 0;
+}
+b {
+  font-weight: 700;
 }
 
 /* if the page's max-width is 1920px or less all columns will display
