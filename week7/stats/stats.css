@@ -1,3 +1,9 @@
+:root {
+  --dark: hsl(0deg 46.01% 31.96%);
+  --light: hsl(0deg 45.95% 92.75%);
+  --gray: rgb(160 160 160);
+}
+
 html,
 body {
   margin: 0;
@@ -9,25 +15,33 @@ body {
   align-items: center;
   font-size: 16px;
   font-family: "Space Mono", monospace;
+  background-color: var(--light);
 }
 table {
-  width: 80%;
+  width: 85%;
   border-collapse: collapse;
   margin-bottom: 2em;
+  border: 2px solid rgb(140 140 140);
+}
+thead {
+  background-color: var(--dark);
+  color: white;
+}
+tbody {
+  background-color: var(--light);
 }
 td {
   border-bottom: 1px solid black;
+  text-align: center;
 }
 h1 {
   text-align: center;
   margin: 1em 0;
+  color: var(--dark);
 }
 b {
   font-weight: 700;
 }
-
-/* if the page's max-width is 1920px or less all columns will display
-The table head will display the full names for each column */
 
 @media only screen and (max-width: 1920px) {
   #table-long-names {
