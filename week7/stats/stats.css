@@ -1,7 +1,7 @@
 :root {
   --dark: hsl(163, 46%, 32%);
   --light: hsl(162, 46%, 95%);
-  --gray: rgb(160 160 160);
+  --gray: hsl(162, 20%, 63%);
 }
 
 html,
@@ -21,7 +21,7 @@ table {
   width: 85%;
   border-collapse: collapse;
   margin-bottom: 2em;
-  border: 2px solid rgb(140 140 140);
+  border: 2px solid var(--gray);
 }
 thead {
   background-color: var(--dark);
@@ -31,7 +31,7 @@ tbody {
   background-color: var(--light);
 }
 td {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--gray);
   text-align: center;
 }
 h1 {
