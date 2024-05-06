@@ -9,6 +9,7 @@ const tabs = {
   "main.py": document.querySelector(".tab-button[name='main.py']"),
   "script.js": document.querySelector(".tab-button[name='script.js']"),
   "style.css": document.querySelector(".tab-button[name='style.css']"),
+  "index.html": document.querySelector(".tab-button[name='index.html']"),
 };
 
 console.log(tabs);
@@ -55,34 +56,6 @@ function tabOnClose(e) {
   deleteTab(file);
 }
 
-function deleteTab(file) {
-  if (tabs.length === 1) return;
-
-  const tabItem = tabs[file].parentNode.parentNode;
-
-  if (tabItem.classList.contains("active")) {
-    const index = Object.keys(tabs).indexOf(file);
-    const nextFile =
-      Object.keys(tabs)[index + 1] || Object.keys(tabs)[index - 1];
-    activateTab(nextFile);
-  }
-
-  tabItem.remove();
-}
-
-function createTabButton(file) {
-  const tabItem = document.querySelector(".tab-item").cloneNode(true);
-  const tabButton = tabItem.querySelector(".tab-button");
-  tabItem.classList.remove("active");
-  console.log("createTabButton", file);
-  console.log(tabButton);
-  tabButton.name = file;
-  tabButton.textContent = file;
-  tabButton.addEventListener("click", tabOnClick);
-  document.querySelector(".tabs-list").appendChild(tabItem);
-  return tabItem;
-}
-
 function activateTextArea() {
   console.log("activateTextArea");
   textArea.value = virtualFiles[Object.keys(tabs)[0]];
@@ -90,12 +63,6 @@ function activateTextArea() {
 
 function activateTab(newFile) {
   const oldFile = document.querySelector(".tab-item.active .tab-button").name;
-
-  if (
-    !document.querySelectorAll(".tab-item").find((tab) => tab.name === newFile)
-  ) {
-    tabs[newFile] = createTabButton(newFile);
-  }
 
   const tabItems = Array.from(document.querySelectorAll(".tab-item"));
 
