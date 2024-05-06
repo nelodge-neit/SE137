@@ -16,11 +16,11 @@ body {
   font-size: 16px;
   font-family: "Space Mono", monospace;
   background-color: var(--light);
+  padding: 1em 2em;
 }
 table {
-  width: 85%;
+  width: 100%;
   border-collapse: collapse;
-  margin-bottom: 2em;
   border: 2px solid var(--gray);
 }
 thead {
@@ -36,8 +36,9 @@ td {
 }
 h1 {
   text-align: center;
-  margin: 1em 0;
+  line-height: 1.5;
   color: var(--dark);
+  margin-top: 0;
 }
 b {
   font-weight: 700;

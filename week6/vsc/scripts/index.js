@@ -44,7 +44,6 @@ activateTextArea();
 
 function tabOnClick(e) {
   const file = e.currentTarget.name;
-  console.log("tabOnClick", file);
   activateTab(file);
 }
 
