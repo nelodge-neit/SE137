@@ -12,8 +12,6 @@ const tabs = {
   "index.html": document.querySelector(".tab-button[name='index.html']"),
 };
 
-console.log(tabs);
-
 const virtualFiles = {
   "main.py":
     "def main() -> None:\n    print('Hello, World!')\n\nif __name__ == '__main__':\n    main()",
@@ -52,26 +50,19 @@ function tabOnClick(e) {
 
 function tabOnClose(e) {
   const file = e.currentTarget.parentNode.querySelector(".tab-button").name;
-  console.log("tabOnClose", file);
   deleteTab(file);
 }
 
 function activateTextArea() {
-  console.log("activateTextArea");
   textArea.value = virtualFiles[Object.keys(tabs)[0]];
 }
 
 function activateTab(newFile) {
-  const oldFile = document.querySelector(".tab-item.active .tab-button").name;
+  const oldFile = document.querySelector(".tab-button.active").name;
+  const tabItems = Array.from(document.querySelectorAll(".tab-button"));
 
-  const tabItems = Array.from(document.querySelectorAll(".tab-item"));
-
-  const oldIndex = tabItems.findIndex(
-    (tabItem) => tabItem.querySelector(".tab-button").name === oldFile
-  );
-  const newIndex = tabItems.findIndex(
-    (tabItem) => tabItem.querySelector(".tab-button").name === newFile
-  );
+  const oldIndex = tabItems.findIndex((tabItem) => tabItem.name === oldFile);
+  const newIndex = tabItems.findIndex((tabItem) => tabItem.name === newFile);
 
   tabItems[oldIndex].classList.remove("active");
   tabItems[newIndex].classList.add("active");
@@ -98,8 +89,7 @@ const filesButtons = Array.from(
 
 for (const fileButton of filesButtons) {
   const onClick = () => {
-    console.log("onClick", fileButton.textContent.trim());
-    activateTab(fileButton.textContent.trim());
+    activateTab(fileButton.name);
   };
   fileButton.addEventListener("click", onClick);
 }
