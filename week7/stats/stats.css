@@ -7,6 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 16px;
 }
 table {
   width: 80%;
@@ -14,4 +15,52 @@ table {
 }
 td {
   border-bottom: 1px solid black;
+}
+h1 {
+  text-align: center;
+}
+
+/* if the page's max-width is 1920px or less all columns will display
+The table head will display the full names for each column */
+
+@media only screen and (max-width: 1920px) {
+  #table-long-names {
+    display: table-row;
+  }
+  #table-short-names {
+    display: none;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+  thead td,
+  tbody td {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #table-long-names {
+    display: none;
+  }
+  #table-short-names {
+    display: table-row;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .stat {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+  thead td {
+    font-size: 1.5em;
+  }
+  tbody td {
+    font-size: 1.2em;
+  }
 }
