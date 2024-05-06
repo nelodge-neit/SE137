@@ -61,7 +61,7 @@
 
             content += `<tr>`
 
-            content += `<td><b>Dude ${i}</b></td>`
+            content += `<td><b>Dude ${String(i+1).padStart(2, "0")}</b></td>`
             content += `<td><b>${id}</b></td>`
 
             for (let j = 0; j < numOfStats; j++) {
