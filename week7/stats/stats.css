@@ -20,6 +20,7 @@ body {
 }
 table {
   width: 100%;
+  max-width: 1250px;
   border-collapse: collapse;
   border: 2px solid var(--gray);
 }
